@@ -110,40 +110,6 @@ int main (int argc, char **argv)
 	printf("Encrypted. see %s \n", KEY_PATH);
 	free( encrypted );
 	fclose(fp);
-	/*
-	   if ( argc < 7 )
-	   {
-	   printf( "Input your MAC address correctly %d ", argc);
-	   exit( 1 );
-	   }
-	   else
-	   {
-	   for (i = 0; i < 6; i++)
-	   {
-	   printf ("%s-", argv[i + 1]);
-	   message[i] = (int)strtol(argv[i + 1], NULL, 16);
-	   printf("%d/",message[i]);
-	   }
-	   printf("\n");
-	   }
-
-	   long long *encrypted = rsa_encrypt (message, sizeof (message), pub);
-	   if (!encrypted)
-	   {
-	   fprintf (stderr, "Error in encryption!\n");
-	   return 1;
-	   }
-
-	   fp = fopen (KEY_PATH, "wb");
-	   printf ("Encrypted:\n");
-	   for (i = 0; i < 6; i++)
-	   {
-	   printf ("%lld\n", (long long) encrypted[i]);
-	   fprintf (fp, "%lld\n", (long long) encrypted[i]);
-	   }
-
-	   fclose( fp );
-	   free( encrypted );
-	   */
+	
 	return 0;
 }
